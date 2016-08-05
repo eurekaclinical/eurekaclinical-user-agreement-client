@@ -29,13 +29,13 @@ import org.eurekaclinical.useragreement.client.comm.UserAgreementStatus;
  *
  * @author Andrew Post
  */
-public final class EurekaClinicalUserAgreementClient extends EurekaClinicalClient {
+public final class EurekaClinicalUserAgreementProxyClient extends EurekaClinicalClient {
 
     private final String serviceUrl;
 
-    public EurekaClinicalUserAgreementClient(String inUserAgreementWebappUrl) {
+    public EurekaClinicalUserAgreementProxyClient(String inUserAgreementServiceUrl) {
         super(null);
-        this.serviceUrl = inUserAgreementWebappUrl;
+        this.serviceUrl = inUserAgreementServiceUrl;
     }
 
     @Override
@@ -44,11 +44,11 @@ public final class EurekaClinicalUserAgreementClient extends EurekaClinicalClien
     }
     
     public UserAgreementStatus getUserAgreementStatus() throws ClientException {
-        return doGet("/proxy-resource/useragreementstatuses/me", UserAgreementStatus.class);
+        return doGet("/api/protected/useragreementstatuses/me", UserAgreementStatus.class);
     }
     
     public Long submitUserAgreement(UserAgreementStatus userAgreementStatus) throws ClientException {
-        URI uri = doPostCreate("/proxy-resource/useragreementstatuses", userAgreementStatus);
+        URI uri = doPostCreate("/api/protected/useragreementstatuses", userAgreementStatus);
         return extractId(uri);
     }
 }
