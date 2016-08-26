@@ -2,7 +2,7 @@ package org.eurekaclinical.useragreement.client.comm;
 
 /*-
  * #%L
- * Eureka! Clinical User Agreement Common
+ * Eureka! Clinical User Agreement Client
  * %%
  * Copyright (C) 2016 Emory University
  * %%

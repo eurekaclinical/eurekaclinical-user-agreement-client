@@ -19,10 +19,10 @@ package org.eurekaclinical.useragreement.client;
  * limitations under the License.
  * #L%
  */
-
 import java.net.URI;
 import org.eurekaclinical.common.comm.clients.ClientException;
 import org.eurekaclinical.common.comm.clients.EurekaClinicalClient;
+import org.eurekaclinical.useragreement.client.comm.Status;
 import org.eurekaclinical.useragreement.client.comm.UserAgreementStatus;
 
 /**
@@ -42,11 +42,19 @@ public final class EurekaClinicalUserAgreementProxyClient extends EurekaClinical
     protected String getResourceUrl() {
         return this.serviceUrl;
     }
-    
+
+    public UserAgreementStatus getUserAgreementStatus(Status status) throws ClientException {
+        if (status != null) {
+            return doGet("/api/protected/useragreementstatuses/me?status=" + status.name(), UserAgreementStatus.class);
+        } else {
+            return getUserAgreementStatus();
+        }
+    }
+
     public UserAgreementStatus getUserAgreementStatus() throws ClientException {
         return doGet("/api/protected/useragreementstatuses/me", UserAgreementStatus.class);
     }
-    
+
     public Long submitUserAgreement(UserAgreementStatus userAgreementStatus) throws ClientException {
         URI uri = doPostCreate("/api/protected/useragreementstatuses", userAgreementStatus);
         return extractId(uri);

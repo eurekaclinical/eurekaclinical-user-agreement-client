@@ -1,11 +1,8 @@
 package org.eurekaclinical.useragreement.client.comm;
 
-import java.util.Date;
-import org.codehaus.jackson.annotate.JsonIgnore;
-
 /*-
  * #%L
- * Eureka! Clinical User Agreement Service
+ * Eureka! Clinical User Agreement Client
  * %%
  * Copyright (C) 2016 Emory University
  * %%
@@ -22,6 +19,8 @@ import org.codehaus.jackson.annotate.JsonIgnore;
  * limitations under the License.
  * #L%
  */
+
+import java.util.Date;
 
 /**
  *

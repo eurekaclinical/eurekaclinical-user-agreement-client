@@ -23,6 +23,7 @@ package org.eurekaclinical.useragreement.client;
 import java.net.URI;
 import org.eurekaclinical.common.comm.clients.ClientException;
 import org.eurekaclinical.common.comm.clients.EurekaClinicalClient;
+import org.eurekaclinical.useragreement.client.comm.Status;
 import org.eurekaclinical.useragreement.client.comm.UserAgreementStatus;
 
 /**
@@ -41,6 +42,14 @@ public final class EurekaClinicalUserAgreementClient extends EurekaClinicalClien
     @Override
     protected String getResourceUrl() {
         return this.serviceUrl;
+    }
+    
+    public UserAgreementStatus getUserAgreementStatus(Status status) throws ClientException {
+        if (status != null) {
+            return doGet("/proxy-resource/useragreementstatuses/me?status=" + status.name(), UserAgreementStatus.class);
+        } else {
+            return getUserAgreementStatus();
+        }
     }
     
     public UserAgreementStatus getUserAgreementStatus() throws ClientException {
