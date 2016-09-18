@@ -27,7 +27,8 @@ import org.eurekaclinical.useragreement.client.comm.Status;
 import org.eurekaclinical.useragreement.client.comm.UserAgreementStatus;
 
 /**
- *
+ * EurekaClinicalUserAgreementClient is a client that should be used by external applications
+ * 
  * @author Andrew Post
  */
 public final class EurekaClinicalUserAgreementClient extends EurekaClinicalClient {
