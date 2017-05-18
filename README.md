@@ -7,11 +7,12 @@ It is a library for accessing an implementation of Eureka! Clinical's RESTful AP
 * EurekaClinicalUserAgreementClient.java: for web clients to call the eurekaclinical-user-agreement-service's REST APIs via a Eureka! Clinical proxy.
 * EurekaClinicalUserAgreementProxyClient.java: for Java applications to call eurekaclinical-user-agreement-service's REST APIs directly.
 
-## Version 1.0 development series
+## Version 2.0 development series
 Latest release: [![Latest release](https://maven-badges.herokuapp.com/maven-central/org.eurekaclinical/eurekaclinical-user-agreement-client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.eurekaclinical//eurekaclinical-user-agreement-client)
 
 ## Version history
-No final releases yet.
+### Version 1.0
+Initial release.
 
 ## Build requirements
 * [Oracle Java JDK 8](http://www.oracle.com/technetwork/java/javase/overview/index.html)
