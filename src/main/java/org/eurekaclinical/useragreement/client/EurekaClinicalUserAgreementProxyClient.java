@@ -21,8 +21,8 @@ package org.eurekaclinical.useragreement.client;
  */
 
 import java.net.URI;
+import org.eurekaclinical.common.comm.clients.AuthorizingEurekaClinicalProxyClient;
 import org.eurekaclinical.common.comm.clients.ClientException;
-import org.eurekaclinical.common.comm.clients.EurekaClinicalClient;
 import org.eurekaclinical.useragreement.client.comm.Status;
 import org.eurekaclinical.useragreement.client.comm.UserAgreementStatus;
 
@@ -31,17 +31,17 @@ import org.eurekaclinical.useragreement.client.comm.UserAgreementStatus;
  * 
  * @author Andrew Post
  */
-public final class EurekaClinicalUserAgreementProxyClient extends EurekaClinicalClient {
+public final class EurekaClinicalUserAgreementProxyClient extends AuthorizingEurekaClinicalProxyClient {
 
-    private final String serviceUrl;
+    private final URI serviceUrl;
 
     public EurekaClinicalUserAgreementProxyClient(String inUserAgreementServiceUrl) {
         super(null);
-        this.serviceUrl = inUserAgreementServiceUrl;
+        this.serviceUrl = URI.create(inUserAgreementServiceUrl);
     }
 
     @Override
-    protected String getResourceUrl() {
+    protected URI getResourceUrl() {
         return this.serviceUrl;
     }
 
