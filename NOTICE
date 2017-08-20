@@ -16,9 +16,7 @@ This project includes:
   AntLR Parser Generator under BSD License
   AOP alliance under Public Domain
   Apache Commons Codec under Apache License, Version 2.0
-  Apache Log4j under The Apache Software License, Version 2.0
-  ASM Core under Apache License, Version 2.0
-  avalon-framework under Apache License, Version 2.0
+  Commons Logging under The Apache Software License, Version 2.0
   Core Hibernate O/RM functionality under GNU Lesser General Public License
   Data Mapper for Jackson under The Apache Software License, Version 2.0
   dom4j under BSD License
@@ -52,9 +50,9 @@ This project includes:
   jersey-servlet under CDDL 1.1 or GPL2 w/ CPE
   Jettison under Apache License, Version 2.0
   JSR-250 Common Annotations for the JavaTM Platform under COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
-  Logging under The Apache Software License, Version 2.0
-  logkit under Apache License, Version 2.0
-  MIME streaming extension under Dual license consisting of the CDDL v1.1 and GPL v2
+  jsr311-api under CDDL License
+  JTA 1.1 under The Apache Software License, Version 2.0
+  MIME streaming extension under CDDL 1.1 or GPL2 w/ CPE
   SLF4J API Module under MIT License
   SLF4J JDK14 Binding under MIT License
   XML Commons External Components XML APIs under The Apache Software License, Version 2.0

@@ -2,7 +2,7 @@ package org.eurekaclinical.useragreement.client;
 
 /*-
  * #%L
- * Eureka! Clinical User Agreement Client
+ * Eureka! Clinical User Agreement Webapp
  * %%
  * Copyright (C) 2016 Emory University
  * %%
@@ -27,7 +27,7 @@ import org.eurekaclinical.useragreement.client.comm.Status;
 import org.eurekaclinical.useragreement.client.comm.UserAgreementStatus;
 
 /**
- * EurekaClinicalUserAgreementClient is a client that should be used by external applications
+ * EurekaClinicalUserAgreementInternalClient is an internal client that should be used only by user-agreement-webapp
  * 
  * @author Andrew Post
  */
@@ -35,30 +35,30 @@ public final class EurekaClinicalUserAgreementClient extends AuthorizingEurekaCl
 
     private final URI serviceUrl;
 
-    public EurekaClinicalUserAgreementClient(String inUserAgreementWebappUrl) {
+    public EurekaClinicalUserAgreementClient(String inUserAgreementServiceUrl) {
         super(null);
-        this.serviceUrl = URI.create(inUserAgreementWebappUrl);
+        this.serviceUrl = URI.create(inUserAgreementServiceUrl);
     }
 
     @Override
     protected URI getResourceUrl() {
         return this.serviceUrl;
     }
-    
+
     public UserAgreementStatus getUserAgreementStatus(Status status) throws ClientException {
         if (status != null) {
-            return doGet("/proxy-resource/useragreementstatuses/me?status=" + status.name(), UserAgreementStatus.class);
+            return doGet("/api/protected/useragreementstatuses/me?status=" + status.name(), UserAgreementStatus.class);
         } else {
             return getUserAgreementStatus();
         }
     }
-    
+
     public UserAgreementStatus getUserAgreementStatus() throws ClientException {
-        return doGet("/proxy-resource/useragreementstatuses/me", UserAgreementStatus.class);
+        return doGet("/api/protected/useragreementstatuses/me", UserAgreementStatus.class);
     }
-    
+
     public Long submitUserAgreement(UserAgreementStatus userAgreementStatus) throws ClientException {
-        URI uri = doPostCreate("/proxy-resource/useragreementstatuses", userAgreementStatus);
+        URI uri = doPostCreate("/api/protected/useragreementstatuses", userAgreementStatus);
         return extractId(uri);
     }
 }
