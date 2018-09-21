@@ -10,7 +10,7 @@ It is a library for accessing an implementation of Eureka! Clinical's RESTful AP
 Latest release: [![Latest release](https://maven-badges.herokuapp.com/maven-central/org.eurekaclinical/eurekaclinical-user-agreement-client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.eurekaclinical//eurekaclinical-user-agreement-client)
 
 ## Version 2.2
-Add user template support.
+Add user template support. Updated dependencies.
 
 ## Version 2.1
 Updated dependencies.
