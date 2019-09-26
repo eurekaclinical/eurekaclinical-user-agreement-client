@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.eurekaclinical</groupId>
         <artifactId>eurekaclinical-parent-standard-deps</artifactId>
-        <version>3</version>
+        <version>4-Alpha-2-SNAPSHOT</version>
     </parent>
 
     <url>https://github.com/eurekaclinical/eurekaclinical-user-agreement-client.git</url>
@@ -30,7 +30,7 @@
     </issueManagement>
     
     <properties>
-        <eurekaclinical-common-version>[4.0,5.0)</eurekaclinical-common-version>
+        <eurekaclinical-common-version>5.0-Alpha-5-SNAPSHOT</eurekaclinical-common-version>
     </properties>
 	
     <build>
