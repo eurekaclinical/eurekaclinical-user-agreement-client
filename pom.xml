@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.eurekaclinical</groupId>
     <artifactId>eurekaclinical-user-agreement-client</artifactId>
-    <version>2.3-Beta-4-SNAPSHOT</version>
+    <version>2.4-Alpha-1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Eureka! Clinical User Agreement Client</name>
     <description>Client for the User Agreement components.</description>
@@ -30,7 +30,7 @@
     </issueManagement>
     
     <properties>
-        <eurekaclinical-common-version>5.0-Alpha-7-SNAPSHOT</eurekaclinical-common-version>
+        <eurekaclinical-common-version>5.1-Alpha-1-SNAPSHOT</eurekaclinical-common-version>
     </properties>
 	
     <build>
