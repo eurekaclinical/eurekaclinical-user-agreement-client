@@ -66,6 +66,8 @@ This project includes:
   JSR-250 Common Annotations for the JavaTM Platform under COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
   jsr311-api under CDDL License
   MIME streaming extension under CDDL 1.1 or GPL2 w/ CPE
+  Old JAXB Core under CDDL+GPL License
+  Old JAXB Runtime under CDDL+GPL License
   SLF4J API Module under MIT License
   SLF4J JDK14 Binding under MIT License
   TXW2 Runtime under CDDL+GPL License
